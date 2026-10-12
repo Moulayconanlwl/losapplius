@@ -200,25 +200,28 @@ export function RegisterAfter({
             placeholder="Company"
           />
         </div>
+        {!!process.env.NEXT_PUBLIC_TERMS_URL &&
+          !!process.env.NEXT_PUBLIC_PRIVACY_URL && (
         <div className={clsx('text-[12px]')}>
           {t(
             'by_registering_you_agree_to_our',
             'By registering you agree to our'
           )}&nbsp;
           <a
-            href={`https://postiz.com/terms`}
+            href={process.env.NEXT_PUBLIC_TERMS_URL}
             className="underline hover:font-bold"
           >
             {t('terms_of_service', 'Terms of Service')}
           </a>&nbsp;
           {t('and', 'and')}&nbsp;
           <a
-            href={`https://postiz.com/privacy`}
+            href={process.env.NEXT_PUBLIC_PRIVACY_URL}
             className="underline hover:font-bold"
           >
             {t('privacy_policy', 'Privacy Policy')}
           </a>&nbsp;
         </div>
+        )}
         <div className="text-center mt-6">
           <div className="w-full flex">
             <Button

@@ -534,7 +534,7 @@ export class StripeService {
       line_items: [
         ...ordersItems,
         {
-          integrationType: `Gitroom Fee (${+process.env.FEE_AMOUNT! * 100}%)`,
+          integrationType: `LosApplius Fee (${+process.env.FEE_AMOUNT! * 100}%)`,
           quantity: 1,
           price: price * +process.env.FEE_AMOUNT!,
         },

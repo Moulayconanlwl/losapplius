@@ -23,7 +23,7 @@ export default async function AuthLayout({
           <div className="w-full relative">
             <div className="custom:fixed custom:text-start custom:left-[20px] custom:justify-start custom:top-[20px] absolute -top-[100px] text-textColor justify-center items-center w-full flex gap-[10px]">
               <Image
-                src={isGeneralServerSide() ? '/postiz.svg' : '/logo.svg'}
+                src={isGeneralServerSide() ? '/losapplius.svg' : '/losapplius.svg'}
                 width={55}
                 height={53}
                 alt="Logo"
@@ -59,7 +59,7 @@ export default async function AuthLayout({
                     />
                   </svg>
                 ) : (
-                  <div className="text-[40px]">{t('gitroom', 'Gitroom')}</div>
+                  <div className="text-[40px]">{t('gitroom', 'LosApplius')}</div>
                 )}
               </div>
             </div>
